@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             version="2.1">
+
+    <persistence-unit name="PhotoGalleryDb">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver" />
+
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/ad_ae7bb05baf2016b?user=b34a6308739fb0&amp;password=ff53ed6d&amp;serverTimezone=Asia/Manila" />
+            
+
+            <property name="hibernate.show_sql"
+                      value="true" />
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update" />
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:b="http://bootsfaces.net/ui"
+                template="/templates/layout_user.xhtml">
+    <ui:define name="title"> - Register</ui:define>
+    <ui:define name="content">
+        <h1>Login</h1>
+        <b:form horizontal="true">
+            <b:inputText id="username" label="User name:"
+                         value="#{userBean.user.userName}" required="true"
+                         renderLabel="true" col-xs="6" label-col-xs="2" />
+            <b:inputSecret id="password" label="Password:"
+                           value="#{userBean.user.password}" required="true"
+                           renderLabel="true" col-xs="6" label-col-xs="2" />
+            <b:inputSecret id="confirmPwd" label="Confirm Password:"
+                           value="#{userBean.password}" required="true"
+                           renderLabel="true" col-xs="6" label-col-xs="2" />
+            <b:commandButton offsetXs="2" value="Register" action="#{userBean.register()}" />
+        </b:form>
+    </ui:define>
+</ui:composition>
